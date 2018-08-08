@@ -1,0 +1,28 @@
+{
+  "name": "Copy On Selection",
+  "version": "1.0",
+		
+  "manifest_version": 2,
+  "description": "Copy Text On Selection",
+  
+  "permissions": [
+    "<all_urls>","tabs","activeTab"
+  ],
+
+  "icons": {
+    "128": "icon.jpg"
+  },
+  
+  "browser_action": {
+    "default_icon": "icon.jpg",
+	"default_title": "Copy-On-Selection"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_start"
+    }
+  ]
+}
